@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 3rem;
+}
+
+header img {
+    width: 229px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 1.25rem;
+}
+
+nav li:first-of-type a {
+    margin-left: 0px;
+}
+
+nav a {
+    margin-left: 2.7rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 18pt;
+    font-family: 'Markazi Text', 'Times New Roman', serif;
+    text-wrap: nowrap;
+    transition: 1s;
+}
+
+nav a:hover {
+    color: #495E57;
+}
+
+nav a:focus {
+    color: #F4CE14;
+    transition: 0s;
+}
