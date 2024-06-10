@@ -2,38 +2,38 @@
     background-color: #495E57;
 }
 
-#heroSection {
+#hero {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     color: #FFF;
     height: 30rem;
 }
 
-#heroSection div:first-of-type {
+#hero div:first-of-type {
     margin-bottom: 3.5rem;
     justify-self: center;
 }
 
-#heroSection div:last-of-type {
+#hero div:last-of-type {
     margin-top: 3.5rem;
     justify-self: center;
 }
 
-#heroSection h1 {
+#hero h1 {
     font-size: 40pt;
     color: #F4CE14;
     font-weight: 500;
     margin-bottom: auto;
 }
 
-#heroSection h2 {
+#hero h2 {
     font-size: 28pt;
     font-weight: 300;
     margin-top: -12px;
     margin-bottom: 0rem;
 }
 
-#heroSection p {
+#hero p {
     width: 20rem;
     font-size: 14pt;
     line-height: 1.5;
@@ -129,7 +129,9 @@
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    margin: auto 1.1rem;
+    margin-top: 0.4rem;
+    margin-left: 1.1rem;
+    margin-right: 1.1rem;
 }
 
 .specials-card-header h4 {
@@ -155,14 +157,21 @@
     margin-bottom: 1.5rem;
 }
 
-.specials-card-body aside {
+.specials-cards:first-of-type aside {
+    margin-bottom: 1.75rem;
+}
+
+.specials-card-body a {
     color: #333333;
+    font-size: 14pt;
     font-weight: 600;
+    text-decoration: none;
+    width: fit-content;
     cursor: pointer;
 }
 
-.specials-cards:first-of-type aside {
-    margin-bottom: 1.75rem;
+.specials-card-body a:hover {
+    text-decoration: underline;
 }
 
 
@@ -172,7 +181,7 @@
     height: 650px;
 }
 
-#testimonialsSection {
+#testimonials {
     padding-top: 6rem;
 }
 
@@ -240,7 +249,7 @@
     padding-top: 3rem;
 }
 
-#aboutSection {
+#about{
     display: flex;
     justify-content: center;
     gap: 6rem;
@@ -292,8 +301,91 @@
     bottom: 5rem;
 }
 
+
+@media (max-width: 990px) {
+    #specialHeader h2 {
+        margin-left: 3%;
+    }
+
+    #specialsCardsContainer {
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+
+    .specials-cards {
+        max-width: 500px;
+        height: 88%;
+        max-height: 525px;
+        margin-bottom: 5rem;
+    }
+
+    .specials-img-container {
+        height: fit-content;
+        width: fit-content;
+        max-width: fit-content;
+    }
+
+    .specials-card-header {
+        margin-top: 1rem;
+    }
+
+    .specials-card-header h4 {
+        font-size: 18pt;
+    }
+
+    .specials-card-body {
+        margin-top: 1rem;
+    }
+
+    #testimonialsBg {
+        height: 750px;
+    }
+
+    #testimonialsCards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 55px;
+    }
+}
+
 @media (max-width: 875px) {
-    #aboutSection {
+    #hero {
+        height: 28rem;
+    }
+
+    #hero div:first-of-type {
+        margin-top: 0rem;
+    }
+
+    #hero h1 {
+        font-size: 30pt;
+        color: #F4CE14;
+        font-weight: 500;
+        margin-bottom: auto;
+    }
+
+    #hero h2 {
+        font-size: 22pt;
+        font-weight: 300;
+        margin-top: -12px;
+        margin-bottom: 0rem;
+    }
+
+    #hero p {
+        width: 17rem;
+        font-size: 13pt;
+    }
+
+    #hero div:last-of-type {
+        margin-top: 2.9rem;
+    }
+
+    #heroImg {
+        width: 260px;
+        height: 360px;
+        margin-left: 2rem;
+    }
+
+    #about{
         flex-direction: column;
         gap: 2rem;
         margin-left: 18%;
@@ -317,18 +409,27 @@
     }
 }
 
-@media (max-width: 990px) {
-    /* #specialsCardsContainer {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 2rem;
-    } */
-
-    #testimonialsBg {
-        height: 750px;
+@media (max-width: 550px) {
+    #hero {
+        height: 27rem;
     }
 
-    #testimonialsCards {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 55px;
+    #hero div:first-of-type {
+        margin-top: 0;
+    }
+
+    #hero div:last-of-type {
+        margin-bottom: 1rem;
+    }
+
+    #hero p {
+        width: 15rem;
+        font-size: 12pt;
+    }
+
+    #heroImg {
+        width: 200px;
+        height: 300px;
+        margin-left: 3rem;
     }
 }

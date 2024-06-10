@@ -1,0 +1,50 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    height: 275px;
+}
+
+#logoContainer {
+    margin-right: 10%;
+}
+
+#logoContainer img {
+    width: 120px;
+    height: auto;
+}
+
+#footerLinksContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2%;
+    width: 60%;
+}
+
+.footer-links-col h4 {
+    font-size: 16pt;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.footer-links-col ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.25rem;
+}
+
+.footer-links-col li {
+    text-align: start;
+}
+
+.footer-links-col a {
+    font-family: 'Karla', serif;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-links-col a:hover {
+    text-decoration: underline;
+}

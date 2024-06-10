@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Main.css'
+import '../styles/Home.css'
 import heroImg from '../images/restauranfood.jpg'
 import greekSalad from '../images/greek salad.jpg'
 import bruchetta from '../images/bruchetta.jpg'
@@ -13,11 +13,11 @@ import reviewer4 from '../images/reviewer4.png'
 import aboutImg1 from '../images/Mario and Adrian A.jpg'
 import aboutImg2 from '../images/Mario and Adrian b.jpg'
 
-const Main = () => {
+const Home = () => {
   return (
     <main>
       <article id='heroSectionBg'>
-        <div className='center-section' id='heroSection'>
+        <div className='center-section' id='hero'>
           <div>
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
@@ -34,7 +34,7 @@ const Main = () => {
         </div>
       </article>
 
-      <article className='center-section' id='highlightsSection'>
+      <article className='center-section' id='highlights'>
         <section id='specialHeader'>
           <h2>This week's special!</h2>
           <button id='onlineMenuBtn'>Online Menu</button>
@@ -50,7 +50,7 @@ const Main = () => {
             </div>
             <div className='specials-card-body'>
               <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
-              <aside><a>Order a delivery</a></aside>
+              <aside><a href='/order-online'>Order a delivery</a></aside>
             </div>
           </div>
 
@@ -64,7 +64,7 @@ const Main = () => {
             </div>
             <div className='specials-card-body'>
               <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.</p>
-              <aside><a>Order a delivery</a></aside>
+              <aside><a href='/order-online'>Order a delivery</a></aside>
             </div>
           </div>
 
@@ -78,14 +78,14 @@ const Main = () => {
             </div>
             <div className='specials-card-body'>
               <p>This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
-              <aside><a>Order a delivery</a></aside>
+              <aside><a href='/order-online'>Order a delivery</a></aside>
             </div>
           </div>
         </section>
       </article>
 
       <article id='testimonialsBg'>
-        <section id='testimonialsSection' className='center-section'>
+        <section id='testimonials' className='center-section'>
           <div id='testimonialsHeader'>
             <h2>Testimonials</h2>
           </div>
@@ -159,7 +159,7 @@ const Main = () => {
       </article>
 
       <article id='aboutSectionContainer'>
-        <section id='aboutSection' className='center-section'>
+        <section id='about' className='center-section'>
           <div id='aboutInfo'>
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
@@ -175,4 +175,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Home

@@ -30,14 +30,80 @@ nav a {
     font-size: 18pt;
     font-family: 'Markazi Text', 'Times New Roman', serif;
     text-wrap: nowrap;
-    transition: 1s;
+    transition: 0.1s;
 }
 
 nav a:hover {
-    color: #495E57;
+    color: #F4CE14;
 }
 
 nav a:focus {
-    color: #F4CE14;
+    color: #495E57;
     transition: 0s;
+}
+
+#hamburger {
+    display: none;
+    position: absolute;
+    top: 2.75rem;
+    right: 3rem;
+    z-index: 10;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+@media (max-width: 950px) {
+    nav ul {
+        position: fixed;
+        top: -1.2rem;
+        right: -100%;
+        padding-top: 6rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 50%;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0vw -50px 3vw rgba(0, 0, 0, 0.92);
+    }
+
+    nav ul.active {
+        right: 0;
+    }
+
+    nav li {
+        margin: 2.5rem 0;
+    }
+
+    nav a {
+        font-size: 24pt;
+        margin-left: 0;
+    }
+
+    #hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    #hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
