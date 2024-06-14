@@ -96,7 +96,7 @@ const BookingForm = (props) => {
     <form onSubmit={handleSubmit}>
       <fieldset>
         <section id='dateTimeContainer' className='form-section'>
-          <div id='timeContainer'>
+          <div id='timeContainer' aria-label='Select a date'>
             <label htmlFor="res-date" data-testid="dateLabel">Choose Date</label>
             <input
               type="date"
@@ -105,10 +105,11 @@ const BookingForm = (props) => {
             />
           </div>
 
-          <div id='dateContainer'>
+          <div id='dateContainer' aria-label='Select a time'>
             <label htmlFor="res-time">Choose Time</label>
             <select
               id="res-time"
+              data-testid="timeSelect"
               onChange={(e) => checkField(e)}
             >
               {renderTimeOptions()}
@@ -117,21 +118,23 @@ const BookingForm = (props) => {
         </section>
 
         <section id='guestsOccasionSection' className='form-section'>
-          <div id='guestsNumContainer'>
+          <div id='guestsNumContainer' aria-label='Number of guests'>
             <label htmlFor="guests">Number of Guests</label>
             <input
               type="number"
               placeholder="1"
               min="1" max="10"
               id="guests"
+              data-testid="guestsNum"
               onChange={(e) => checkField(e)}
             />
           </div>
 
-          <div id='occasionContainer'>
+          <div id='occasionContainer' aria-label='Select the type of occasion'>
             <label htmlFor="occasion">Occasion</label>
             <select
               id="occasion"
+              data-testid="occasionSelect"
               onChange={(e) => checkField(e)}
             >
               <option value=''>Occasion</option>
@@ -144,6 +147,7 @@ const BookingForm = (props) => {
 
         <section id='submitContainer'>
           <input
+            data-testid="submitBtn"
             type="submit"
             value="Make Your Reservation"
           />

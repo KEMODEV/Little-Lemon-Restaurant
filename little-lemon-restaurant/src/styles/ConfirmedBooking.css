@@ -29,6 +29,18 @@ article {
 }
 
 #dateTimeText {
-    font-size: 14pt;
+    font-size: 15pt;
     font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+#guestsOccasionText {
+    font-size: 14pt;
+    margin-bottom: 13rem;
+}
+
+span {
+    color: #495e57;
+    font-weight: 800;
 }
