@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Home.css'
+import { Link } from 'react-router-dom'
 import heroImg from '../images/restauranfood.jpg'
 import greekSalad from '../images/greek salad.jpg'
 import bruchetta from '../images/bruchetta.jpg'
@@ -22,7 +23,7 @@ const Home = () => {
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
             <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-            <button id='reserveTableBtn'>Reserve a Table</button>
+            <Link to='/reservations'><button id='reserveTableBtn'>Reserve a Table</button></Link>
           </div>
           <div>
             <img
@@ -37,7 +38,7 @@ const Home = () => {
       <article className='center-section' id='highlights'>
         <section id='specialHeader'>
           <h2>This week's special!</h2>
-          <button id='onlineMenuBtn'>Online Menu</button>
+          <button id='onlineMenuBtn'><Link to='/online-order'>Online Menu</Link></button>
         </section>
         <section id='specialsCardsContainer'>
           <div className='specials-cards'>

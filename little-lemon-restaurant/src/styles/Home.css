@@ -1,5 +1,7 @@
 #heroSectionBg {
     background-color: #495E57;
+    width: 100vw;
+    margin-left: -5.5%;
 }
 
 #hero {
@@ -87,6 +89,15 @@
     font-size: 13pt;
     font-weight: 600;
     cursor: pointer;
+}
+
+#onlineMenuBtn:focus {
+    background-color: #495E57;
+}
+
+#onlineMenuBtn a {
+    color: #000;
+    text-decoration: none;
 }
 
 #specialsCardsContainer {
